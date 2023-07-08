@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+    <script  type="module" src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" ></script>
+    <title>CONTROLLER</title>
+</head>
+
+<body>
+    <div class = "container">
+        <div class = "room1">
+            <h3 id = 'shine'>CONTROLLER</h3>
+            <div class = 'row'>
+                <div class="power-switch">
+                    <input type="checkbox" id = "room1light1" />
+                    <div class="button">
+                        <svg class="power-off">
+                            <use xlink:href="#line" class="line" />
+                            <use xlink:href="#circle" class="circle" />
+                        </svg>
+                        <svg class="power-on">
+                            <use xlink:href="#line" class="line" />
+                            <use xlink:href="#circle" class="circle" />
+                        </svg>
+                        <h4>LIGHT</h4>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <hr style="width: 300px;">
+    
+        <div id="methan" class="gauge-container" style="text-align: center;"><h3 id = 'shine'>TEMPERATURE</h3></div> 
+
+
+
+    </div>
+
+
+      
+      <!-- SVG -->
+      <div class = "svg-container" style="width:25%; height:25%;">
+      <svg xmlns="http://www.w3.org/2000/svg"style="display: none;">
+        <symbol xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 150 150" id="line">
+          <line x1="72" y1="34" x2="72" y2="58"/>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="circle">
+          <circle cx="75" cy="80" r="35"/>
+        </symbol>
+      </svg>
+    </div>
+
+
+
+    <script type="module" src="g.js"></script> 
+    <script type="module" src="script.js"></script>
+
+    
+</body>
+</html>
