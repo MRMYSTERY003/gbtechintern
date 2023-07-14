@@ -13,6 +13,10 @@
 </head>
 
 <body>
+
+    <script type="text/javascript"  src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+
+
     <div class = "container">
         <div class = "room1">
             <h3 id = 'shine'>CONTROLLER</h3>
@@ -34,9 +38,11 @@
             </div>
         </div>
 
-        <hr style="width: 300px;">
-    
-        <div id="methan" class="gauge-container" style="text-align: center;"><h3 id = 'shine'>TEMPERATURE</h3></div> 
+    <hr style="width: 300px;">
+
+    <div id="methan" class="gauge-container" style="text-align: center;"><h3 id = 'shine'>TEMPERATURE</h3></div> 
+    <div class="alan-btn"></div>
+
 
 
 
@@ -60,6 +66,17 @@
 
     <script type="module" src="g.js"></script> 
     <script type="module" src="script.js"></script>
+    <script>
+        var alanBtnInstance = alanBtn({
+          key: "54edce81d6ca1925db274129ed6049b02e956eca572e1d8b807a3e2338fdd0dc/stage",
+          onCommand: function (commandData) {
+            if (commandData.command === "go:back") {
+              //call client code that will react to the received command
+            }
+          },
+          rootEl: document.getElementById("alan-btn"),
+        });
+      </script>
 
     
 </body>
