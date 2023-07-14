@@ -37,8 +37,8 @@ const firebaseConfig = {
 
 
 var room1light1 = document.getElementById('room1light1');
-var pathl = ref(db,'/esp8266/light1');
-var patht = ref(db,'/room1/esp8266/temp');
+var pathl = ref(db,'/data/light');
+var patht = ref(db,'/data/temp');
 
 function setval(path, val){
     set(pathl, val);
