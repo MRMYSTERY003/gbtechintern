@@ -11,6 +11,29 @@
   width: var(--width);
   height: var(--height);
 }
+
+.noti {
+  display: flex;
+  justify-content: space-around;
+}
+
+.motion {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  font: 0.5rem;
+  color: #fff;
+  font-family: "Andada Pro", serif;
+}
+.door {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  font: 0.5rem;
+  color: #fff;
+  font-family: "Andada Pro", serif;
+}
+
 .power-switch .button {
   width: 60%;
   height: 100%;

@@ -37,8 +37,12 @@ const firebaseConfig = {
 
 
 var room1light1 = document.getElementById('room1light1');
+var door = document.getElementById("d-res");
+var motion = document.getElementById("m-res");
 var pathl = ref(db,'/data/light');
 var patht = ref(db,'/data/temp');
+var pathd = ref(db, "/data/door");
+var pathm = ref(db, "/data/motion");
 
 function setval(path, val){
     set(pathl, val);
@@ -60,6 +64,26 @@ function  set_status(){
         const data = snapshot.val();
         console.log(data);
         myGauge.setValueAnimated(data, 1);
+    });
+
+    onValue(pathd, (snapshot) => {
+        const data = snapshot.val();
+        console.log(data);
+        if(data == 1){
+            door.innerText = "Opened!";
+        }else{
+            door.innerText = "Closed!";
+        }
+    });
+
+    onValue(pathm, (snapshot) => {
+        const data = snapshot.val();
+        console.log(data);
+        if(data == 1){
+            motion.innerText = "Detected!";
+        }else{
+            motion.innerText = "Calm!";
+        }
     });
 }
 
