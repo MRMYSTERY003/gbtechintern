@@ -12,6 +12,10 @@
   height: var(--height);
 }
 
+.value-text {
+  font-size: 0.9rem;
+}
+
 .noti {
   display: flex;
   justify-content: space-around;
