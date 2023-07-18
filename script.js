@@ -9,7 +9,7 @@ var myGauge = Gauge(document.getElementById("methan"),{
     dialStartAngle: 135,
     dialEndAngle: 45,
     value: 23,
-    max: 100,
+    max: 200,
     min: 0,
     valueDialClass: "value",
     valueClass: "value-text",
@@ -17,7 +17,7 @@ var myGauge = Gauge(document.getElementById("methan"),{
     gaugeClass: "gauge",
     showValue: true,
     gaugeColor: null,
-    label: function(val) {return Math.round(val);} // returns a string label that will be rendered in the center
+    label: function(val) {return (val.toFixed(2);} // returns a string label that will be rendered in the center
 });
 
 
@@ -69,7 +69,7 @@ function  set_status(){
     onValue(pathd, (snapshot) => {
         const data = snapshot.val();
         console.log(data);
-        if(data == 1){
+        if(data == 0){
             door.innerText = "Opened!";
         }else{
             door.innerText = "Closed!";
