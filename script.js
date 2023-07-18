@@ -17,7 +17,7 @@ var myGauge = Gauge(document.getElementById("methan"),{
     gaugeClass: "gauge",
     showValue: true,
     gaugeColor: null,
-    label: function(val) {return (val.toFixed(2);} // returns a string label that will be rendered in the center
+    label: function(val) {return val.toFixed(2);} // returns a string label that will be rendered in the center
 });
 
 
